@@ -99,7 +99,7 @@
 
 /* ANIMATION */
 .menu-btn__burger-top.open {
-  transform: rotate(90deg) translateY(-12px) translateX(10px);
+  transform: rotate(90deg) translateY(-16px) translateX(10px);
 }
 
 .menu-btn__burger-mid.open {
@@ -107,7 +107,7 @@
 }
 
 .menu-btn__burger-btm.open {
-  transform: rotate(90deg) translateY(12px) translateX(-10px);
+  transform: rotate(90deg) translateY(16px) translateX(-10px);
 }
 
 .menu-btn.open {
