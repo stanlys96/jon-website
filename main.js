@@ -34,8 +34,8 @@ newsBtn.addEventListener('click', () => {
     midSection.style.display = "none";
     setTimeout(() => {
       newsSection.classList.add("fade");
-    }, 500);
-  }, 500);
+    }, 350);
+  }, 350);
 });
 
 nameBtn.addEventListener('click', () => {
@@ -46,6 +46,6 @@ nameBtn.addEventListener('click', () => {
     newsSection.style.display = "none";
     setTimeout(() => {
       midSection.classList.add("fade");
-    }, 500)
-  }, 500);
+    }, 350)
+  }, 350);
 });
