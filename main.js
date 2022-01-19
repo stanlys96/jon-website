@@ -4,15 +4,11 @@ let menuOpen = false;
 menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menuBtn.classList.add('open');
-    setTimeout(() => {
-      menuBar.style.visibility = "visible";
-    }, 400);
+    menuBar.classList.toggle("fade");
     menuOpen = true;
   } else {
     menuBtn.classList.remove('open');
-    setTimeout(() => {
-      menuBar.style.visibility = "hidden";
-    }, 400);
+    menuBar.classList.toggle("fade");
     menuOpen = false;
   }
 });

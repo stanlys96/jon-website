@@ -80,8 +80,12 @@
   display: flex;
   justify-content: end;
   margin-top: 10px;
-  visibility: hidden;
-  /* transition: all .5s ease-in-out; */
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.menu-bar.fade {
+  opacity: 1;
 }
 
 .menu-li {
