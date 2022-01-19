@@ -55,7 +55,7 @@
   height: 6px;
   background: #000;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  box-shadow: 0 2px 5px rgba(255,101,47, .4);
   transition: all .5s ease-in-out;
 }
 .menu-btn__burger::before {
@@ -81,10 +81,12 @@
   justify-content: end;
   margin-top: 10px;
   opacity: 0;
-  transition: opacity .5s ease-in-out;
+  visibility: hidden;
+  transition: all .5s ease-in-out;
 }
 
 .menu-bar.fade {
+  visibility: visible;
   opacity: 1;
 }
 
