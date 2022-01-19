@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: orator, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #header {
@@ -25,6 +25,7 @@
   letter-spacing: 3px;
   text-decoration: none;
   color: #000;
+  font-family: orator, sans-serif;
 }
 
 .hamb-btn {
@@ -162,6 +163,7 @@
   text-decoration: none;
   color: #000;
   font-size: 17.5px;
+  font-family: orator, sans-serif;
 }
 
 #mid {
@@ -187,16 +189,17 @@
 }
 
 .content-card {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .content-header {
   font-weight: 400;
+  font-size: 16px;
 }
 
 .card-header {
   font-weight: 800;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .card-header,
@@ -206,4 +209,14 @@
 
 .card-subheader {
   margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.card-content-header {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.card-content-location {
+  font-size: 16px;
 }
