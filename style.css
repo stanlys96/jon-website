@@ -10,6 +10,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 #header {
   margin: 40px 150px 0;
 }
@@ -31,10 +35,6 @@
 
 .hamb-btn {
   display: inline-block;
-}
-
-.content {
-  margin: 0 auto;
 }
 
 .img-container {
