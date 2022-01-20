@@ -17,6 +17,7 @@
 .logo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .web-name {
@@ -43,88 +44,51 @@
 }
 
 .menu-btn {
-  width: 50px;
-  height: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  border: 3px solid #fff;
+  /* border: 3px solid #fff; */
 }
-
-.menu-btn__burger-top {
+.menu-btn__burger {
   width: 30px;
   height: 4px;
   background: #000;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.4);
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
 }
-
-.menu-btn__burger-mid {
-  width: 30px;
-  height: 4px;
-  background: #000;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.4);
-  transition: all .5s ease-in-out;
-  margin: 6px 0;
-}
-
-.menu-btn__burger-btm {
-  width: 30px;
-  height: 4px;
-  background: #000;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.4);
-  transition: all .5s ease-in-out;
-}
-
-/* .menu-btn__burger::before,
+.menu-btn__burger::before,
 .menu-btn__burger::after {
   content: '';
   position: absolute;
-  width: 40px;
+  width: 30px;
   height: 4px;
   background: #000;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255,101,47, .4);
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
-} */
-
-/* .menu-btn__burger-top{
-  transform: translateY(-16px);
 }
-.menu-btn__burger-button-btm {
-  transform: translateY(16px);
-} */
-
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+.menu-btn__burger::after {
+  transform: translateY(8px);
+}
 /* ANIMATION */
-.menu-btn__burger-top.open {
-  transform: rotate(90deg) translateY(-16px) translateX(10px);
-}
-
-.menu-btn__burger-mid.open {
+.menu-btn.open .menu-btn__burger {
   transform: rotate(90deg);
+  box-shadow: none;
 }
-
-.menu-btn__burger-btm.open {
-  transform: rotate(90deg) translateY(16px) translateX(-10px);
-}
-
-.menu-btn.open {
-  transform: rotate(90deg);
-}
-/* .menu-btn.open .menu-btn__burger::before {
-  transform: rotate(90deg) translate(35px);
-}
-.menu-btn.open .menu-btn__burger::after {
-  transform: rotate(90deg) translate(35px);
-} */
 
 .menu-bar {
   list-style: none;
   display: flex;
   justify-content: end;
-  margin-top: 10px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.75s ease-in-out;
@@ -167,10 +131,13 @@
 }
 
 #mid {
+  margin: 0 auto;
+  width: 1200px;
   transition: all 0.35s ease-in-out;
 }
 
 #news {
+  width: 1200px;
   margin: 80px 140px 0;
   display: none;
   opacity: 0;
