@@ -131,13 +131,10 @@
 }
 
 #mid {
-  margin: 0 auto;
-  width: 1200px;
   transition: all 0.35s ease-in-out;
 }
 
 #news {
-  width: 1200px;
   margin: 80px 140px 0;
   display: none;
   opacity: 0;
