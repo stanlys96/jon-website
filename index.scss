@@ -1,19 +1,16 @@
 @font-face {
-  font-family: "orator";
+  font-family: 'orator';
   src: url(./fonts/OratorStd.otf);
 }
+
 html {
   overflow: scroll;
   overflow-x: hidden;
 }
-
 ::-webkit-scrollbar {
-  width: 0;
-  /* Remove scrollbar space */
-  background: transparent;
-  /* Optional: just make scrollbar invisible */
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
-
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
@@ -23,7 +20,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #header {
@@ -42,7 +39,7 @@ html {
   letter-spacing: 3px;
   text-decoration: none;
   color: #000;
-  font-family: "orator", sans-serif;
+  font-family: 'orator', sans-serif;
 }
 
 .hamb-btn {
@@ -67,44 +64,48 @@ html {
   width: 80px;
   height: 40px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
   /* border: 3px solid #fff; */
 }
-
 .menu-btn__burger {
   width: 30px;
   height: 4px;
   background: #000;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
 }
-
 .menu-btn__burger::before,
 .menu-btn__burger::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 30px;
   height: 4px;
   background: #000;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
 }
-
 .menu-btn__burger::before {
   transform: translateY(-8px);
 }
-
 .menu-btn__burger::after {
   transform: translateY(8px);
 }
-
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {
   transform: rotate(90deg);
   box-shadow: none;
 }
+
+// .menu-bar {
+//   list-style: none;
+//   display: flex;
+//   justify-content: end;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: all 0.75s ease-in-out;
+// }
 
 #mid.unfade {
   visibility: hidden;
@@ -130,6 +131,19 @@ html {
   visibility: visible;
   opacity: 1;
 }
+
+// .menu-li {
+//   margin-left: 40px;
+// }
+
+// .menu-a {
+//   display: inline-block;
+//   text-decoration: none;
+//   color: #000;
+//   font-size: 17.5px;
+//   font-family: orator, sans-serif;
+//   transition: all 0.5s ease-in-out;
+// }
 
 #mid {
   transition: all 0.35s ease-in-out;
@@ -194,45 +208,50 @@ html {
   opacity: 0;
   visibility: hidden;
   transition: all 0.75s ease-in-out;
-}
-.menu-bar li {
-  margin-left: 40px;
-}
-.menu-bar li a {
-  position: relative;
-  display: flex;
-  padding: 6px;
-  color: #000;
-  text-decoration: none;
-  font-size: 17.5px;
-  font-family: "orator", sans-serif;
-  transition: all 0.5s ease-in-out;
-}
-.menu-bar li a span {
-  position: relative;
-  overflow: hidden;
-  transition: 0.6s;
-  font-family: "orator", sans-serif;
-}
-.menu-bar li a span .out {
-  display: inline-flex;
-}
-.menu-bar li a span .in {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  transform: translateX(100%);
-}
-.menu-bar li a:hover span {
-  font-family: "orator", sans-serif;
-}
-.menu-bar li a:hover span .out {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-.menu-bar li a:hover span .in {
-  opacity: 1;
-  transform: translateX(0);
-}
 
-/*# sourceMappingURL=style.css.map */
+  li {
+    margin-left: 40px;
+    a {
+      position: relative;
+      display: flex;
+      padding: 6px;
+      color: #000;
+      text-decoration: none;
+      font-size: 17.5px;
+      font-family: 'orator', sans-serif;
+      transition: all 0.5s ease-in-out;
+
+      span {
+        position: relative;
+        overflow: hidden;
+        transition: 0.6s;
+        font-family: 'orator', sans-serif;
+        .out {
+          display: inline-flex;
+        }
+
+        .in {
+          position: absolute;
+          left: 0;
+          opacity: 0;
+          transform: translateX(100%);
+        }
+      }
+
+      &:hover {
+        span {
+          font-family: 'orator', sans-serif;
+          .out {
+            opacity: 0;
+            transform: translateX(-100%);
+          }
+
+          .in {
+            opacity: 1;
+            transform: translateX(0);      
+          }
+        }
+      }
+    }
+  }
+}
