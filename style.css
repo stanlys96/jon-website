@@ -36,15 +36,6 @@ html {
   align-items: center;
 }
 
-.web-name {
-  display: inline-block;
-  font-size: 25px;
-  letter-spacing: 3px;
-  text-decoration: none;
-  color: #000;
-  font-family: "orator", sans-serif;
-}
-
 .hamb-btn {
   display: inline-block;
 }
@@ -231,6 +222,48 @@ html {
   transform: translateX(-100%);
 }
 .menu-bar li a:hover span .in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.logo a {
+  position: relative;
+  display: flex;
+  padding: 6px;
+  color: #000;
+  text-decoration: none;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-family: "orator", sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+.logo a span {
+  position: relative;
+  overflow: hidden;
+  transition: 0.6s;
+  font-family: "orator", sans-serif;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+.logo a span .out {
+  display: inline-flex;
+}
+.logo a span .in {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.logo a:hover span {
+  font-family: "orator", sans-serif;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+.logo a:hover span .out {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.logo a:hover span .in {
   opacity: 1;
   transform: translateX(0);
 }
